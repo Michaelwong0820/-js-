@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .map {
+            width: 600px;
+            height: 600px;
+            background: #ccc;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map" class="map"></div>
+    <script src="./Food.js"></script>
+    <script src="./Snake.js"></script>
+    <script src="./Game.js"></script>
+    <script>
+        //获取地图
+        var map = document.getElementById('map');
+
+        // //构造食物函数
+        // var food = new Food();
+        // //渲染食物
+        // food.render(map);
+        // //构造蛇函数
+        // var snake = new Snake();
+        // //渲染蛇
+        // snake.render(map);
+
+        //构造游戏控制器
+        var game = new Game(map);
+        game.start(map);
+
+    </script>
+</body>
+</html>
